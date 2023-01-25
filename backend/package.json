@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.0.5",
+    "@strapi/plugin-i18n": "4.5.6",
+    "@strapi/plugin-users-permissions": "4.5.6",
+    "@strapi/strapi": "4.5.6",
+    "fs-extra": "^10.0.0",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.27",
+    "pg": "^8.8.0"
+  },
+  "name": "@geo-knowledge-hub/cms-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Backend for the GEO Knowledge Hub CMS (Based on Strapi)",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "format": "prettier --config ./.prettierrc --ignore-path ./.prettierignore --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3"
+  },
+  "author": {
+    "name": "GEO Knowledge Hub Team"
+  },
+  "strapi": {
+    "uuid": "4e4c16a8-ec9a-40db-8da0-80441e588ce9",
+    "template": "@strapi/template-blog@^2.0.0",
+    "starter": "@strapi/starter-gatsby-blog"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
