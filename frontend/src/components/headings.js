@@ -6,7 +6,7 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-import React from "react"
+import React from "react";
 
 const Headings = ({ title, description }) => {
   return (
@@ -16,7 +16,7 @@ const Headings = ({ title, description }) => {
         <p className="mt-4 text-2xl text-neutral-500">{description}</p>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Headings
+export default Headings;

@@ -12,7 +12,6 @@ const BlockRichText = ({ data }) => {
   return (
     <div className="prose mx-auto py-6 max-w-4xl">
       <div
-        className="text-lg"
         dangerouslySetInnerHTML={{
           __html: data.richTextBody.data.childMarkdownRemark.html,
         }}

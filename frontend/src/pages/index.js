@@ -6,13 +6,19 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-import React from "react"
-import 'tw-elements';
-import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
-import PostsGrid from "../components/posts-grid"
-import Seo from "../components/seo"
-import Headings from "../components/headings"
+import React from "react";
+
+import "tw-elements";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import { useStaticQuery, graphql } from "gatsby";
+
+import Seo from "../components/seo";
+import Layout from "../components/layout";
+import Headings from "../components/headings";
+import PostsGrid from "../components/posts-grid";
 
 const IndexPage = () => {
   const { allStrapiPost, strapiGlobal } = useStaticQuery(graphql`
@@ -27,7 +33,7 @@ const IndexPage = () => {
         siteDescription
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -40,7 +46,7 @@ const IndexPage = () => {
         <PostsGrid posts={allStrapiPost.nodes} />
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

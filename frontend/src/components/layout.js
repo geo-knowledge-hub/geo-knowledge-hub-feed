@@ -6,9 +6,9 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-import React from "react"
-import Footer from "./footer"
-import Navbar from "./navbar"
+import React from "react";
+import Footer from "./footer";
+import Navbar from "./navbar";
 
 const Layout = ({ as, children }) => {
   return (
@@ -19,7 +19,7 @@ const Layout = ({ as, children }) => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

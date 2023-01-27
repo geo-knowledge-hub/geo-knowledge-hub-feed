@@ -7,16 +7,15 @@
  */
 
 import React from "react";
-import PostCard from "./post-card";
 
-const PostsGrid = ({ posts }) => {
+import Media from "./media";
+
+const BlockMedia = ({ data }) => {
   return (
-    <div className="container mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map((post) => (
-        <PostCard post={post} />
-      ))}
+    <div className="py-8">
+      <Media data={data} />
     </div>
   );
 };
 
-export default PostsGrid;
+export default BlockMedia;

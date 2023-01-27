@@ -6,9 +6,9 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ seo = {} }) => {
   const { strapiGlobal } = useStaticQuery(graphql`
@@ -31,18 +31,18 @@ const Seo = ({ seo = {} }) => {
         }
       }
     }
-  `)
+  `);
 
-  const { siteName, defaultSeo, favicon } = strapiGlobal
+  const { siteName, defaultSeo, favicon } = strapiGlobal;
 
   // Merge default and page-specific SEO values
-  const fullSeo = { ...defaultSeo, ...seo }
+  const fullSeo = { ...defaultSeo, ...seo };
 
   // Add site name to title
-  fullSeo.metaTitle = `${fullSeo.metaTitle} | ${siteName}`
+  fullSeo.metaTitle = `${fullSeo.metaTitle} | ${siteName}`;
 
   const getMetaTags = () => {
-    const tags = []
+    const tags = [];
 
     if (fullSeo.metaTitle) {
       tags.push(
@@ -54,7 +54,7 @@ const Seo = ({ seo = {} }) => {
           name: "twitter:title",
           content: fullSeo.metaTitle,
         }
-      )
+      );
     }
     if (fullSeo.metaDescription) {
       tags.push(
@@ -70,10 +70,10 @@ const Seo = ({ seo = {} }) => {
           name: "twitter:description",
           content: fullSeo.metaDescription,
         }
-      )
+      );
     }
     if (fullSeo.shareImage) {
-      const imageUrl = fullSeo.shareImage.localFile.url
+      const imageUrl = fullSeo.shareImage.localFile.url;
       tags.push(
         {
           name: "image",
@@ -87,20 +87,20 @@ const Seo = ({ seo = {} }) => {
           name: "twitter:image",
           content: imageUrl,
         }
-      )
+      );
     }
     if (fullSeo.article) {
       tags.push({
         property: "og:type",
         content: "article",
-      })
+      });
     }
-    tags.push({ name: "twitter:card", content: "summary_large_image" })
+    tags.push({ name: "twitter:card", content: "summary_large_image" });
 
-    return tags
-  }
+    return tags;
+  };
 
-  const metaTags = getMetaTags()
+  const metaTags = getMetaTags();
 
   return (
     <Helmet
@@ -113,7 +113,7 @@ const Seo = ({ seo = {} }) => {
       ]}
       meta={metaTags}
     />
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;

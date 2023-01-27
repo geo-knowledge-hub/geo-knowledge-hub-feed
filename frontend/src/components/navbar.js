@@ -7,13 +7,10 @@
  */
 
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 import { Disclosure } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigationOptions = [
   {
