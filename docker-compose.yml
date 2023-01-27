@@ -1,10 +1,10 @@
 version: "3.7"
 services: 
-  geo-cms-database:
+  geo-cms-db:
     image: kartoza/postgis:12.4
     restart: unless-stopped
-    hostname: geo-cms-database
-    container_name: geo-cms-database
+    hostname: geo-cms-db
+    container_name: geo-cms-db
     environment: 
       POSTGRES_USER: "docker"
       POSTGRES_PASS: "docker"
