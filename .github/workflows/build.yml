@@ -41,4 +41,4 @@ jobs:
           network: host
           context: backend
           allow: network.host
-          tags: geoknowledgehub/geo-knowledge-hub:${{ steps.vars.outputs.tag }}
+          tags: geoknowledgehub/geo-knowledge-hub-cms:${{ steps.vars.outputs.tag }}
