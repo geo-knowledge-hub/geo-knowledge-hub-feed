@@ -1,0 +1,58 @@
+version: '3'
+services:
+  geo-knowledge-hub-cms-backend:
+    container_name: geo-knowledge-hub-cms-backend
+    build: .
+    image: geo-knowledge-hub-cms-backend:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: geo-knowledge-hub-cms-backend-db
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./config:/opt/app/config
+      - ./src:/opt/app/src
+      - ./package.json:/opt/package.json
+      - ./yarn.lock:/opt/yarn.lock
+      - ./.env:/opt/app/.env
+      - ./public/uploads:/opt/app/public/uploads
+    ports:
+      - '1337:1337'
+    networks:
+      - geo-knowledge-hub-cms-backend
+    depends_on:
+      - geo-knowledge-hub-cms-backend-db
+      
+  geo-knowledge-hub-cms-backend-db:
+    container_name: geo-knowledge-hub-cms-backend-db
+    platform: linux/amd64 #for platform error on Apple M1 chips
+    restart: unless-stopped
+    env_file: .env
+    image: postgres:14.5-alpine
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    volumes:
+      - geo-knowledge-hub-cms-backend-data:/var/lib/postgresql/data/ #using a volume
+      #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
+
+    ports:
+      - '5432:5432'
+    networks:
+      - geo-knowledge-hub-cms-backend
+
+volumes:
+  geo-knowledge-hub-cms-backend-data:
+
+networks:
+  geo-knowledge-hub-cms-backend:
+    name: geo-knowledge-hub-cms-backend
+    driver: bridge

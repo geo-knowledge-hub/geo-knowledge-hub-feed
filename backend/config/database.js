@@ -6,8 +6,6 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-const path = require('path');
-
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
