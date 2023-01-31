@@ -1,0 +1,8 @@
+build
+node_modules
+public
+.cache
+.git
+.idea/
+.vscode/
+.env
