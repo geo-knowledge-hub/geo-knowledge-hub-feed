@@ -1,6 +1,6 @@
-# GEO Knowledge Hub CMS | Frontend
+# GEO Knowledge Hub CMS | Blog
 
-Frontend for the GEO Knowledge Hub CMS.
+Blog built on top of GEO Knowledge Hub CMS.
 
 ### Local Development
 

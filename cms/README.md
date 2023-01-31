@@ -1,6 +1,6 @@
-# GEO Knowledge Hub CMS | Backend
+# GEO Knowledge Hub CMS
 
-Backend for the GEO Knowledge Hub CMS.
+GEO Knowledge Hub CMS module.
 
 ### Local Development
 
