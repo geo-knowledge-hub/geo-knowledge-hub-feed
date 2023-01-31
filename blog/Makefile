@@ -2,7 +2,7 @@ generate:  ## Generate the static pages
 	docker build -t "geoknowledgehub/geo-knowledge-hub-blog:0.1" .
 	docker run \
 		--rm \
-		-v geo_knowledge_hub_blog:/app/site/build \
+		-v geo_knowledge_hub_blog:/app/site/public \
 		--env-file ${PWD}/.env \
 		geoknowledgehub/geo-knowledge-hub-blog:0.1
 
