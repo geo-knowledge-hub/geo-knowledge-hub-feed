@@ -12,7 +12,7 @@ on:
         default: 'Manual trigger'
 
 jobs:
-  backend:
+  cms:
     runs-on: ubuntu-22.04
 
     steps:
@@ -39,6 +39,6 @@ jobs:
         with:
           push: true
           network: host
-          context: backend
+          context: cms
           allow: network.host
           tags: geoknowledgehub/geo-knowledge-hub-cms:${{ steps.vars.outputs.tag }}
