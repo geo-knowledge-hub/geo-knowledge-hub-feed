@@ -8,8 +8,6 @@
 
 import React from "react";
 
-import "tw-elements";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,6 +17,10 @@ import Seo from "../components/seo";
 import Layout from "../components/layout";
 import Headings from "../components/headings";
 import PostsGrid from "../components/posts-grid";
+
+if(!(typeof document === "undefined")) {
+  import("tw-elements");
+}
 
 const IndexPage = () => {
   const { allStrapiPost, strapiGlobal } = useStaticQuery(graphql`
