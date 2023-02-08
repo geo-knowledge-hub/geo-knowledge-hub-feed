@@ -1,6 +1,6 @@
-# GEO Knowledge Hub CMS | Blog
+# GEO Knowledge Hub CMS | Feed
 
-Blog built on top of GEO Knowledge Hub CMS.
+Feed page built on top of GEO Knowledge Hub CMS.
 
 ### Local Development
 

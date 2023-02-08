@@ -14,7 +14,7 @@ const Layout = ({ as, children }) => {
   return (
     <div className="flex min-h-screen flex-col justify-between bg-neutral-50 text-neutral-900">
       <div>
-        <Navbar currentPageId={as === "post" ? "post" : "blog"} />
+        <Navbar currentPageId={as === "post" ? "post" : "feed"} />
         {children}
       </div>
       <Footer />

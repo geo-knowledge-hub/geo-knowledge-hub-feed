@@ -27,21 +27,36 @@ const PostPage = ({ data, ...props }) => {
       <Seo seo={seo} />
       <header className="container max-w-5xl py-8">
         <h1 className="text-4xl font-bold text-neutral-700">{post.title}</h1>
-        <p className="mt-4 text-2xl text-neutral-500">{post.description}</p>
+        <p className="mt-5 text-2xl text-neutral-500">{post.description}</p>
 
-        <div className="mt-5 flex flex-row items-center space-x-2">
+        <div className="flex flex-row items-center justify-between mt-2">
           <div>
-            <GatsbyImage
-              className="h-9 w-9 rounded-full border-b-2"
-              image={getImage(post.author.avatar.localFile)}
-              alt="Avatar"
-            />
+            <div className="mt-5 flex flex-row items-center space-x-2">
+              <div>
+                <GatsbyImage
+                  className="h-9 w-9 rounded-full border-b-2"
+                  image={getImage(post.author.avatar.localFile)}
+                  alt="Avatar"
+                />
+              </div>
+              <div>
+                <h5 className="text-md font-medium leading-tight">
+                  {post.author.name}
+                </h5>
+                <p className="text-gray-500">{post.author.institution}</p>
+              </div>
+            </div>
           </div>
           <div>
-            <h5 class="text-md font-medium leading-tight">
-              {post.author.name}
-            </h5>
-            <p class="text-gray-500">{post.author.institution}</p>
+            <div className="ui centered">
+              <div className="addthis_toolbox addthis_32x32_style">
+                <a className="addthis_button_twitter"></a>
+                <a className="addthis_button_facebook"></a>
+                <a className="addthis_button_email"></a>
+                <a className="addthis_button_linkedin"></a>
+                <a className="addthis_button_compact"></a>
+              </div>
+            </div>
           </div>
         </div>
       </header>

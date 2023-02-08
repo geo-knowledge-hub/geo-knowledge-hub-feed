@@ -11,15 +11,15 @@ import { Link, graphql } from "gatsby";
 
 const PostCard = ({ post }) => {
   return (
-    <Link
-      to={`/post/${post.slug}`}
+    <a
+      href={`/post/${post.slug}`}
       className="overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md"
     >
       <div className="px-4 py-4">
         <h3 className="font-bold text-neutral-700">{post.title}</h3>
         <p className="mt-2 text-neutral-500 line-clamp-2">{post.description}</p>
       </div>
-    </Link>
+    </a>
   );
 };
 

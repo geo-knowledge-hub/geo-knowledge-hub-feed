@@ -14,7 +14,7 @@ const Video = ({data}) => {
     <div className="flex flex-col items-center">
       <video
         className="clip w-9/12 rounded-md shadow-2xl"
-        autoplay
+        autoPlay
         loop
         controls
         muted

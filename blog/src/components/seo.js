@@ -109,10 +109,12 @@ const Seo = ({ seo = {} }) => {
         {
           rel: "icon",
           href: favicon.localFile.url,
-        },
+        }
       ]}
       meta={metaTags}
-    />
+    >
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-627fb9ee797c3e18"></script>
+    </Helmet>
   );
 };
 
