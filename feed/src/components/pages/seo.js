@@ -1,8 +1,8 @@
 /*
- * This file is part of GEO-Knowledge-Hub-CMS.
+ * This file is part of GEO Knowledge Hub Feed.
  * Copyright (C) 2023 GEO Secretariat.
  *
- * GEO-Knowledge-Hub-CMS is free software; you can redistribute it and/or modify it
+ * GEO Knowledge Hub Feed is free software; you can redistribute it and/or modify it
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
@@ -10,7 +10,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Seo = ({ seo = {} }) => {
+export const Seo = ({ seo = {} }) => {
   const { strapiGlobal } = useStaticQuery(graphql`
     query {
       strapiGlobal {
@@ -109,13 +109,14 @@ const Seo = ({ seo = {} }) => {
         {
           rel: "icon",
           href: favicon.localFile.url,
-        }
+        },
       ]}
       meta={metaTags}
     >
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-627fb9ee797c3e18"></script>
+      <script
+        type="text/javascript"
+        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-627fb9ee797c3e18"
+      ></script>
     </Helmet>
   );
 };
-
-export default Seo;
