@@ -1,11 +1,47 @@
 /*
- * This file is part of GEO-Knowledge-Hub-CMS.
+ * This file is part of GEO Knowledge Hub Feed.
  * Copyright (C) 2023 GEO Secretariat.
  *
- * GEO-Knowledge-Hub-CMS is free software; you can redistribute it and/or modify it
+ * GEO Knowledge Hub Feed is free software; you can redistribute it and/or modify it
  * under the terms of the MIT License; see LICENSE file for more details.
  */
- 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import "~infima/dist/css/default/default.css";
+
+/* Infima global configuration */
+:root {
+  --ifm-color-primary: #406078;
+  --ifm-code-font-size: 95%;
+}
+
+.hero {
+  padding: 2rem 2rem;
+  color: var(--ifm-color-primary);
+}
+
+/* General component classes */
+.border {
+  border-radius: 10px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+.left-aligned {
+  text-align: left;
+}

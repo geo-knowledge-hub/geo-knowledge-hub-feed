@@ -1,0 +1,18 @@
+/*
+ * This file is part of GEO Knowledge Hub Feed.
+ * Copyright (C) 2023 GEO Secretariat.
+ *
+ * GEO Knowledge Hub Feed is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+/* Feed card definitions */
+.cardShadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.readButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

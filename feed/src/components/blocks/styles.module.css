@@ -1,0 +1,56 @@
+/*
+ * This file is part of GEO Knowledge Hub Feed.
+ * Copyright (C) 2023 GEO Secretariat.
+ *
+ * GEO Knowledge Hub Feed is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+/* Image-related styles */
+.image {
+  height: 36rem;
+}
+
+/* Slider-related styles */
+.slider {
+  max-width: 56rem;
+}
+
+/* Video-related styles */
+.video {
+  width: 95%;
+  height: 95%;
+}
+
+/* Text-related styles. */
+.text {
+  max-width: 56rem;
+  font-size: 1.05rem;
+}
+
+/* Quote-related styles. */
+.quote {
+  max-width: 56rem;
+  border-left-width: 4px;
+  border-color: #4a5568;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  color: #4a5568;
+}
+
+.quote p {
+  font-size: 2rem;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.quote cite {
+  display: block;
+
+  font-weight: 600;
+  font-style: normal;
+
+  text-transform: uppercase;
+}

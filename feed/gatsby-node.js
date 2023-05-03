@@ -1,10 +1,18 @@
+/*
+ * This file is part of GEO-Knowledge-Hub-CMS.
+ * Copyright (C) 2023 GEO Secretariat.
+ *
+ * GEO-Knowledge-Hub-CMS is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const postPage = path.resolve("./src/templates/post-page.js")
+  const feedPage = path.resolve("./src/templates/feed-page.js")
 
   const result = await graphql(
     `
@@ -21,22 +29,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your GEO Knowledge Hub CMS Posts`,
+      `There was an error loading your GEO Knowledge Hub Feed data`,
       result.errors
     )
 
     return
   }
 
-  const posts = result.data.allStrapiPost.nodes
+  const feed = result.data.allStrapiPost.nodes
 
-  if (posts.length > 0) {
-    posts.forEach((post) => {
+  if (feed.length > 0) {
+    feed.forEach((feedItem) => {
       createPage({
-        path: `/post/${post.slug}`,
-        component: postPage,
+        path: `/feed/${feedItem.slug}`,
+        component: feedPage,
         context: {
-          slug: post.slug,
+          slug: feedItem.slug,
         },
       })
     })
