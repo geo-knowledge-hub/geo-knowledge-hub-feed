@@ -30,7 +30,8 @@ module.exports = {
                 blocks: {
                   populate: "*",
                 },
-                author: "*"
+                author: "*",
+                category: "*"
               },
             },
           },

@@ -14,6 +14,9 @@ export const query = graphql`
     slug
     title
     description
+    category {
+      name
+    }
     author {
       name
       email

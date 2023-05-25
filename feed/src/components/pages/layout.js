@@ -23,9 +23,19 @@ const navbarItems = [
     url: "/feed",
   },
   {
-    name: "Documentation",
+    name: "User guides",
     position: "left",
-    url: "https://gkhub.earthobservations.org/doc",
+    url: "https://gkhub.earthobservations.org/doc/docs/introduction/",
+  },
+  {
+    name: "Development",
+    position: "left",
+    url: "https://gkhub.earthobservations.org/doc/development/introduction/",
+  },
+  {
+    name: "Releases",
+    position: "left",
+    url: "https://gkhub.earthobservations.org/doc/releases",
   },
   {
     name: "GitHub",
@@ -52,11 +62,11 @@ const navbarItems = [
 const footerItems = [
   {
     name: "Digital library",
-    url: "https://gkhub.earthobservations.org",
+    url: "/",
   },
   {
     name: "Documentation",
-    url: "https://gkhub.earthobservations.org/doc",
+    url: "/doc",
   },
   {
     name: "Twitter",
@@ -73,7 +83,7 @@ export const Layout = ({ children }) => {
     <div className={styles.layout}>
       <div>
         <Navbar
-          title={"GEO Knowledge Hub Feed"}
+          title={"GEO Knowledge Hub"}
           brand={logoHub}
           items={navbarItems}
         />

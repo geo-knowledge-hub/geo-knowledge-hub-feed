@@ -21,21 +21,32 @@ const requiredProperties = ["id", "title", "description", "author"];
 /**
  * Item component for the Feed.
  */
-const FeedItem = ({ title, description, link }) => {
+const FeedItem = ({ title, description, link, category, createdAt }) => {
+  const truncatedDescription =
+    description.length > 100
+      ? description.substring(0, 97) + "..."
+      : description;
+
   return (
-    <div className={clsx("card", "margin-bottom--md", styles.cardShadow)}>
+    <a
+      href={link}
+      className={clsx(
+        "card",
+        "margin-bottom--md",
+        styles.cardShadow,
+        styles.cardHoverEffect
+      )}
+    >
       <div className={"card__header"}>
+        <div className={styles.cardBadgeContainer}>
+          <span className={clsx(styles.cardBadge)}>{category.name}</span>
+        </div>
         <h4>{title}</h4>
       </div>
       <div className={"card__body"}>
-        <p>{description}</p>
+        <p>{truncatedDescription}</p>
       </div>
-      <div className={clsx("card__footer", styles.readButton)}>
-        <a href={link} className={"button button--secondary"}>
-          Read
-        </a>
-      </div>
-    </div>
+    </a>
   );
 };
 
@@ -68,6 +79,7 @@ const FeedPanel = ({ feedItems, itemsPerPage = 6 }) => {
               title={feed.title}
               description={feed.description}
               link={`/feed/${feed.slug}`}
+              category={feed.category}
             />
           </div>
         ))}

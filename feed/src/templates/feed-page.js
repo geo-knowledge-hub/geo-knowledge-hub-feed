@@ -105,6 +105,9 @@ export const pageQuery = graphql`
       blocks {
         ...Blocks
       }
+      category {
+        name
+      }
       author {
         name
         email
