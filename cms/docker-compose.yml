@@ -1,3 +1,12 @@
+#
+# This file is part of GEO-Knowledge-Hub-CMS.
+#
+# Copyright (C) 2023 GEO Secretariat.
+#
+# GEO-Knowledge-Hub-CMS is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+#
+
 version: '3'
 services:
   geo-knowledge-hub-cms-backend:
@@ -29,10 +38,10 @@ services:
       - geo-knowledge-hub-cms-backend
     depends_on:
       - geo-knowledge-hub-cms-backend-db
-      
+
   geo-knowledge-hub-cms-backend-db:
     container_name: geo-knowledge-hub-cms-backend-db
-    platform: linux/amd64 #for platform error on Apple M1 chips
+    platform: linux/amd64
     restart: unless-stopped
     env_file: .env
     image: postgres:14.5-alpine
@@ -40,12 +49,13 @@ services:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: ${DATABASE_NAME}
+
     volumes:
-      - geo-knowledge-hub-cms-backend-data:/var/lib/postgresql/data/ #using a volume
-      #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
+      - geo-knowledge-hub-cms-backend-data:/var/lib/postgresql/data/
 
     ports:
-      - '5432:5432'
+      - '25432:5432'
+
     networks:
       - geo-knowledge-hub-cms-backend
 
