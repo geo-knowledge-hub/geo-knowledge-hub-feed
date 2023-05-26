@@ -10,11 +10,10 @@
 version: '3'
 services:
   geo-knowledge-hub-cms-backend-db:
+    image: postgres:14.5-alpine
     container_name: geo-knowledge-hub-cms-backend-db
-    platform: linux/amd64
     restart: unless-stopped
     env_file: .env
-    image: postgres:14.5-alpine
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
