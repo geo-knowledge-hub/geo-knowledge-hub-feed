@@ -54,7 +54,7 @@ services:
       - geo-knowledge-hub-cms-backend-data:/var/lib/postgresql/data/
 
     ports:
-      - '25432:5432'
+      - '5432:5432'
 
     networks:
       - geo-knowledge-hub-cms-backend
