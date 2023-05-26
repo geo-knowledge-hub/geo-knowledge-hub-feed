@@ -18,11 +18,20 @@ compose-start: ## Start compose stack
 compose-stop: ## Stop compose stack
 	docker-compose stop
 
-compose-down:  ## Down compose stack
+compose-down:  ## Destroy compose stack
 	docker-compose down
 
 compose-logs:  ## Compose stack logs
 	docker-compose logs -f --tail 20
+
+#
+# Development services
+#
+services-start:  ## Start development services
+	docker-compose -f docker-compose.services.yml up -d
+
+services-down:  ## Destroy development services
+	docker-compose -f docker-compose.services.yml down
 
 #
 # Build
