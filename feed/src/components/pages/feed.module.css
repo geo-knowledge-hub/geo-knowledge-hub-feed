@@ -11,8 +11,35 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.readButton {
+.cardHoverEffect {
+  transition: box-shadow 0.3s ease;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.cardHoverEffect:hover {
+  box-shadow: 0 0.5em 1em -0.3em rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Badge */
+.cardBadge {
+  margin: 0.5em 0.5em 0 0;
+  padding: 0.25em 0.5em;
+  font-size: 0.7em;
+  font-weight: 500;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 5px;
+}
+
+.cardBadgeContainer {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Body and description */
+.cardBody {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
