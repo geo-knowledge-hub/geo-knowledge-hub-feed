@@ -42,7 +42,7 @@ jobs:
         with:
           context: cms
           push: true
-          file: Dockerfile.prod
+          file: cms/Dockerfile.prod
           build-args: |
             PUBLIC_URL=${{ env.CMS_PUBLIC_URL }}
           tags: geoknowledgehub/geo-cms-app:${{ steps.vars.outputs.tag }}
