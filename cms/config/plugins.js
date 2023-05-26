@@ -17,4 +17,30 @@ module.exports = ({ env }) => ({
   'entity-notes': {
     enabled: true,
   },
+  documentation: {
+    enabled: true,
+    config: {
+      openapi: '3.0.0',
+      info: {
+        version: '1.0.0',
+        title: 'GEO Knowledge Hub CMS Rest API documentation',
+        description: 'Documentation of the GEO Knowledge Hub CMS Rest API',
+        license: {
+          name: 'MIT',
+          url: 'https://opensource.org/licenses/MIT',
+        },
+        termsOfService: '#',
+        contact: {
+          name: 'GEO Secretariat',
+          email: 'secretariat@geosec.org',
+          url: 'https://www.earthobservations.org/index.php',
+        },
+      },
+      'x-strapi-config': {
+        plugins: ['upload', 'users-permissions'],
+        path: '/documentation',
+      },
+      security: [{ bearerAuth: [] }],
+    },
+  },
 });

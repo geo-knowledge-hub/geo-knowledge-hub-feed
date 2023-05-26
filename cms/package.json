@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.5",
-    "@strapi/plugin-i18n": "4.6.0",
-    "@strapi/plugin-sentry": "^4.6.0",
-    "@strapi/plugin-users-permissions": "4.6.0",
-    "@strapi/strapi": "4.6.0",
+    "@strapi/plugin-documentation": "^4.10.6",
+    "@strapi/plugin-graphql": "^4.10.6",
+    "@strapi/plugin-i18n": "4.10.6",
+    "@strapi/plugin-sentry": "^4.10.6",
+    "@strapi/plugin-users-permissions": "4.10.6",
+    "@strapi/strapi": "4.10.6",
     "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
