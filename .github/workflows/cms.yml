@@ -1,4 +1,4 @@
-name: build
+name: cms
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
         default: 'Manual trigger'
 
 jobs:
-  build:
+  cms-build:
     runs-on: ubuntu-22.04
 
     steps:
