@@ -14,10 +14,14 @@
     "strapi-plugin-notes": "^1.0.1",
     "twitter-api-v2": "^1.14.1"
   },
-  "name": "@geo-knowledge-hub/cms-backend",
-  "private": true,
+  "name": "@geo-knowledge-hub/cms",
   "version": "0.1.0",
   "description": "Backend for the GEO Knowledge Hub CMS (Based on Strapi)",
+  "keywords": [
+    "strapi",
+    "cms",
+    "blog-like"
+  ],
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",

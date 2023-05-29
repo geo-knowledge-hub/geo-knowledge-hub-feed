@@ -1,7 +1,6 @@
 {
   "name": "@geo-knowledge-hub/feed",
   "version": "0.1.0",
-  "private": true,
   "description": "GEO Knowledge Hub Feed",
   "author": {
     "name": "GEO Knowledge Hub Team"
@@ -9,7 +8,6 @@
   "keywords": [
     "gatsby",
     "feed",
-    "cms",
     "blog-like"
   ],
   "scripts": {
@@ -53,5 +51,6 @@
   },
   "engines": {
     "node": ">=16.0.0 <18.0.0"
-  }
+  },
+  "license": "MIT"
 }
