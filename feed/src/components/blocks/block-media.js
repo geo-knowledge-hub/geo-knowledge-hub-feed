@@ -21,7 +21,7 @@ export const BlockMedia = ({ data }) => {
   return (
     <>
       {isValid ? (
-        <div className={"padding-top--lg padding-bottom--lg"}>
+        <div className={"padding-bottom--lg"}>
           <Media data={data} />
         </div>
       ) : null}

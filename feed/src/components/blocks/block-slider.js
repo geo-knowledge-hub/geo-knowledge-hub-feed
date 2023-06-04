@@ -29,7 +29,7 @@ export const BlockSlider = ({ data }) => {
       {isValid ? (
         <div
           className={clsx(
-            "container padding-top--lg padding-bottom--lg",
+            "container padding-bottom--lg",
             styles.slider
           )}
         >
@@ -41,7 +41,7 @@ export const BlockSlider = ({ data }) => {
             slidesToScroll={1}
             arrows={true}
             swipe={true}
-            adaptiveHeight={true}
+            adaptiveHeight={false}
             lazyLoad={true}
           >
             {files.map((file) => (
