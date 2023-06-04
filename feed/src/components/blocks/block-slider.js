@@ -42,7 +42,7 @@ export const BlockSlider = ({ data }) => {
             arrows={true}
             swipe={true}
             adaptiveHeight={false}
-            lazyLoad={true}
+            lazyLoad={false}
           >
             {files.map((file) => (
               <Media key={file.id} data={{ file: file }} />

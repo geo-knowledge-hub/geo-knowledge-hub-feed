@@ -24,6 +24,7 @@
     "@heroicons/react": "^2.0.13",
     "clsx": "^1.2.1",
     "gatsby": "^4.6.1",
+    "gatsby-plugin-asset-path": "^3.0.4",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-local-search": "^2.0.1",

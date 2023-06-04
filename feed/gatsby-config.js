@@ -6,12 +6,9 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || "/",
+  assetPrefix: process.env.ASSETS_PATH_PREFIX || "/",
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-postcss",
@@ -89,5 +86,8 @@ module.exports = {
           })),
       },
     },
+    {
+      resolve: "gatsby-plugin-asset-path"
+    }
   ],
 };
