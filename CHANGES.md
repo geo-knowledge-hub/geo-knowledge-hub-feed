@@ -1,6 +1,6 @@
 # Changes
 
-## Version 0.1.0 (2023-06-06)
+## Version 0.1.0 (2023-06-08)
 
 - Initial public release;
 - Added initial implementation of the `CMS` to manage Feed content (Based on [Strapi](https://strapi.io/));
