@@ -54,4 +54,4 @@ jobs:
           file: cms/Dockerfile.prod
           build-args: |
             PUBLIC_URL=${{ env.CMS_PUBLIC_URL }}
-          tags: geoknowledgehub/geo-cms-app:${{ steps.vars.outputs.tag }}
+          tags: geoknowledgehub/geo-feed-cms:${{ steps.vars.outputs.tag }}
