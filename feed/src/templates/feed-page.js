@@ -67,7 +67,7 @@ const FeedPage = ({ data, ...props }) => {
                           </div>
                         </div>
                         <div className={"col col--6 flex-right-aligned"}>
-                          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://gkhub.earthobservations.org/feed" data-a2a-title="GEO Knowledge Hub Feed">
+                          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-title="GEO Knowledge Hub Feed">
                             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                             <a class="a2a_button_linkedin"></a>
                             <a class="a2a_button_twitter"></a>
