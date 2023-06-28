@@ -113,10 +113,7 @@ export const Seo = ({ seo = {} }) => {
       ]}
       meta={metaTags}
     >
-      <script
-        type="text/javascript"
-        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-627fb9ee797c3e18"
-      ></script>
+      <script async src="https://static.addtoany.com/menu/page.js"></script>
     </Helmet>
   );
 };

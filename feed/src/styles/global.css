@@ -38,6 +38,11 @@
   justify-content: center;
 }
 
+.flex-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .right-aligned {
   text-align: right;
 }
