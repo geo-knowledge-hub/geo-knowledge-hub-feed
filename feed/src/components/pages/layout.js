@@ -23,6 +23,11 @@ const navbarItems = [
     url: "/feed",
   },
   {
+    name: "Training and events",
+    position: "left",
+    url: "https://gkhub.earthobservations.org/doc/events",
+  },
+  {
     name: "User guides",
     position: "left",
     url: "https://gkhub.earthobservations.org/doc/docs/introduction/",
