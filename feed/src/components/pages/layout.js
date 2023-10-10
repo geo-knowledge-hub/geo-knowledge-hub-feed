@@ -43,6 +43,11 @@ const navbarItems = [
     url: "https://gkhub.earthobservations.org/doc/development/introduction/",
   },
   {
+    name: "Reviewers",
+    position: "left",
+    url: "https://gkhub.earthobservations.org/doc/reviewers/",
+  },
+  {
     name: "Releases",
     position: "left",
     url: "https://gkhub.earthobservations.org/doc/releases",
