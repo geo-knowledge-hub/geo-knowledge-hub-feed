@@ -1,5 +1,9 @@
 # Changes
 
+## Version 0.2.1 (2023-10-11)
+
+- Added `Reviewers` and `Reference` sections in the navbar menu.
+
 ## Version 0.2.0 (2023-08-22)
 
 - Added `Event` entity in the `CMS` to support events management ([#25](https://github.com/geo-knowledge-hub/geo-knowledge-hub-feed/issues/25)).
