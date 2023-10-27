@@ -21,7 +21,13 @@
       "type": "enumeration",
       "enum": [
         "Webinar",
-        "Hands-on"
+        "Hands-on",
+        "Workshop",
+        "Presentation",
+        "Panel discussion",
+        "Keynote",
+        "Session",
+        "Event"
       ]
     },
     "date": {
