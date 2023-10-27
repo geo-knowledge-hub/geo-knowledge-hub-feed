@@ -1,5 +1,9 @@
 # Changes
 
+## Version 0.2.2 (2023-10-27)
+
+- Added new `Event` categories (`Workshop`, `Presentation`, `Panel discussion`, `Keynote speak`, `Session`, `Event`).
+
 ## Version 0.2.1 (2023-10-11)
 
 - Added `Reviewers` and `Reference` sections in the navbar menu.

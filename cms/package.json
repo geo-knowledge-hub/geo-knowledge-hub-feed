@@ -15,7 +15,7 @@
     "twitter-api-v2": "^1.14.1"
   },
   "name": "@geo-knowledge-hub/cms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Backend for the GEO Knowledge Hub CMS (Based on Strapi)",
   "keywords": [
     "strapi",
